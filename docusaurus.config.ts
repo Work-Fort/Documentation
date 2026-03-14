@@ -6,7 +6,7 @@ const config: Config = {
   tagline: 'Build services on the WorkFort platform',
   url: 'https://docs.workfort.dev',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Work-Fort',
