@@ -8,10 +8,10 @@
     "storybook:solid:dev": "pnpm --filter @workfort-docs/storybook-solid storybook dev -p 6007",
     "storybook:react:dev": "pnpm --filter @workfort-docs/storybook-react storybook dev -p 6008",
     "build": "pnpm docs:build && pnpm storybook:build",
-    "storybook:build": "pnpm storybook:build:solid && pnpm storybook:build:react && pnpm storybook:build:lit && pnpm storybook:merge",
-    "storybook:build:lit": "pnpm --filter @workfort-docs/storybook-lit storybook build -o ../../build/design",
-    "storybook:build:solid": "pnpm --filter @workfort-docs/storybook-solid storybook build -o ../../build/design/solid",
-    "storybook:build:react": "pnpm --filter @workfort-docs/storybook-react storybook build -o ../../build/design/react",
+    "storybook:build": "pnpm storybook:build:lit && pnpm storybook:build:solid && pnpm storybook:build:react && pnpm storybook:merge",
+    "storybook:build:lit": "pnpm --filter @workfort-docs/storybook-lit exec storybook build -o ../../build/design",
+    "storybook:build:solid": "pnpm --filter @workfort-docs/storybook-solid exec storybook build -o ../../build/design/solid",
+    "storybook:build:react": "pnpm --filter @workfort-docs/storybook-react exec storybook build -o ../../build/design/react",
     "storybook:merge": "echo 'Storybook outputs merged into build/design/'"
   },
   "devDependencies": {
