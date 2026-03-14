@@ -13,4 +13,4 @@ export default meta;
 type Story = StoryObj;
 export const Default: Story = {};
 export const Zero: Story = { args: { count: 0 } };
-export const HighCount: Story = { args: { count: 99 } };
+export const Large: Story = { args: { count: 99 } };
