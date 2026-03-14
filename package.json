@@ -1,7 +1,6 @@
 {
   "name": "workfort-documentation",
   "private": true,
-  "type": "module",
   "scripts": {
     "docs:dev": "docusaurus start",
     "docs:build": "docusaurus build",

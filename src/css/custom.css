@@ -1,0 +1,22 @@
+/* src/css/custom.css */
+:root {
+  --ifm-color-primary: #1c1917;
+  --ifm-color-primary-dark: #0c0a09;
+  --ifm-color-primary-darker: #000000;
+  --ifm-color-primary-darkest: #000000;
+  --ifm-color-primary-light: #292524;
+  --ifm-color-primary-lighter: #44403c;
+  --ifm-color-primary-lightest: #57534e;
+  --ifm-font-family-base: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: ui-monospace, 'SF Mono', 'Fira Code', monospace;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #e7e5e4;
+  --ifm-color-primary-dark: #d6d3d1;
+  --ifm-color-primary-darker: #a8a29e;
+  --ifm-color-primary-darkest: #78716c;
+  --ifm-color-primary-light: #fafaf9;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
+}
