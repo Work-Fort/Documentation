@@ -4,9 +4,16 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@workfort/ui': link:../scope/lead/web/packages/ui
+
 importers:
 
   .:
+    dependencies:
+      '@workfort/ui':
+        specifier: link:../scope/lead/web/packages/ui
+        version: link:../scope/lead/web/packages/ui
     devDependencies:
       '@docusaurus/core':
         specifier: ^3.7.0
@@ -27,12 +34,15 @@ importers:
   storybook/lit:
     dependencies:
       '@workfort/ui':
-        specifier: latest
-        version: 0.0.1
+        specifier: link:../../../scope/lead/web/packages/ui
+        version: link:../../../scope/lead/web/packages/ui
       lit:
         specifier: ^3.2.0
         version: 3.3.2
     devDependencies:
+      '@storybook/addon-a11y':
+        specifier: ^10.2.19
+        version: 10.2.19(storybook@10.2.19(@testing-library/dom@10.4.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       '@storybook/web-components-vite':
         specifier: latest
         version: 10.2.19(esbuild@0.27.4)(lit@3.3.2)(rollup@4.59.0)(storybook@10.2.19(@testing-library/dom@10.4.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@6.4.1(@types/node@25.5.0)(jiti@1.21.7)(terser@5.46.0))(webpack@5.105.4(esbuild@0.27.4))
@@ -46,11 +56,11 @@ importers:
   storybook/react:
     dependencies:
       '@workfort/ui':
-        specifier: latest
-        version: 0.0.1
+        specifier: link:../../../scope/lead/web/packages/ui
+        version: link:../../../scope/lead/web/packages/ui
       '@workfort/ui-react':
         specifier: latest
-        version: 0.0.1(@workfort/ui@0.0.1)(react@19.2.4)
+        version: 0.0.1(@workfort/ui@scope+lead+web+packages+ui)(react@19.2.4)
       react:
         specifier: ^19.0.0
         version: 19.2.4
@@ -71,11 +81,11 @@ importers:
   storybook/solid:
     dependencies:
       '@workfort/ui':
-        specifier: latest
-        version: 0.0.1
+        specifier: link:../../../scope/lead/web/packages/ui
+        version: link:../../../scope/lead/web/packages/ui
       '@workfort/ui-solid':
         specifier: latest
-        version: 0.0.1(@workfort/ui@0.0.1)(solid-js@1.9.11)
+        version: 0.0.1(@workfort/ui@scope+lead+web+packages+ui)(solid-js@1.9.11)
       solid-js:
         specifier: ^1.9.0
         version: 1.9.11
@@ -1987,6 +1997,11 @@ packages:
   '@slorber/remark-comment@1.0.0':
     resolution: {integrity: sha512-RCE24n7jsOj1M0UPvIQCHTe7fI0sFL4S2nwKVWwHyVr/wI/H8GosgsJGyhnsZoGFnD/P2hLf1mSbrrgSLN93NA==}
 
+  '@storybook/addon-a11y@10.2.19':
+    resolution: {integrity: sha512-SJGf1ghCoRVlwyiRwz5GiHuNvu7C5iCDNIRJW8WGOJlnoQa3rYaY7WJ/8a/eT9N8buIscL9AYWudhh5zsI1W3g==}
+    peerDependencies:
+      storybook: ^10.2.19
+
   '@storybook/builder-vite@10.2.19':
     resolution: {integrity: sha512-a59xALzM9GeYh6p+wzAeBbDyIe+qyrC4nxS3QNzb5i2ZOhrq1iIpvnDaOWe80NC8mV3IlqUEGY8Uawkf//1Rmg==}
     peerDependencies:
@@ -2399,9 +2414,6 @@ packages:
       '@workfort/ui': ^0.0.1
       solid-js: ^1.8.0
 
-  '@workfort/ui@0.0.1':
-    resolution: {integrity: sha512-9jZB9plwF5f6KaReDHaz/ro2FZFGnhxXmykaCRa7dh1ar7K17V2NLpodafJr8RbsaQApc2ZYoSEClobQiLo5qQ==}
-
   '@xtuc/ieee754@1.2.0':
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
 
@@ -2554,6 +2566,10 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
+
+  axe-core@4.11.1:
+    resolution: {integrity: sha512-BASOg+YwO2C+346x3LZOeoovTIoTrRqEsqMa6fmfAV0P+U9mFr9NsyOEpiYvFjbc64NMrSswhV50WdXzdb/Z5A==}
+    engines: {node: '>=4'}
 
   babel-loader@9.2.1:
     resolution: {integrity: sha512-fqe8naHt46e0yIdkjUZYqddSXfej3AHajX+CSO5X7oy0EmPc6o5Xh+RClNoHjnieWz9AW4kZxW9yyFMhVB1QLA==}
@@ -8606,6 +8622,12 @@ snapshots:
       micromark-util-character: 1.2.0
       micromark-util-symbol: 1.1.0
 
+  '@storybook/addon-a11y@10.2.19(storybook@10.2.19(@testing-library/dom@10.4.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))':
+    dependencies:
+      '@storybook/global': 5.0.0
+      axe-core: 4.11.1
+      storybook: 10.2.19(@testing-library/dom@10.4.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+
   '@storybook/builder-vite@10.2.19(esbuild@0.27.4)(rollup@4.59.0)(storybook@10.2.19(@testing-library/dom@10.4.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@6.4.1(@types/node@25.5.0)(jiti@1.21.7)(terser@5.46.0))(webpack@5.105.4(esbuild@0.27.4))':
     dependencies:
       '@storybook/csf-plugin': 10.2.19(esbuild@0.27.4)(rollup@4.59.0)(storybook@10.2.19(@testing-library/dom@10.4.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@6.4.1(@types/node@25.5.0)(jiti@1.21.7)(terser@5.46.0))(webpack@5.105.4(esbuild@0.27.4))
@@ -9122,21 +9144,17 @@ snapshots:
 
   '@workfort/auth@0.0.1': {}
 
-  '@workfort/ui-react@0.0.1(@workfort/ui@0.0.1)(react@19.2.4)':
+  '@workfort/ui-react@0.0.1(@workfort/ui@scope+lead+web+packages+ui)(react@19.2.4)':
     dependencies:
       '@workfort/auth': 0.0.1
-      '@workfort/ui': 0.0.1
+      '@workfort/ui': link:../scope/lead/web/packages/ui
       react: 19.2.4
 
-  '@workfort/ui-solid@0.0.1(@workfort/ui@0.0.1)(solid-js@1.9.11)':
+  '@workfort/ui-solid@0.0.1(@workfort/ui@scope+lead+web+packages+ui)(solid-js@1.9.11)':
     dependencies:
       '@workfort/auth': 0.0.1
-      '@workfort/ui': 0.0.1
+      '@workfort/ui': link:../scope/lead/web/packages/ui
       solid-js: 1.9.11
-
-  '@workfort/ui@0.0.1':
-    dependencies:
-      lit: 3.3.2
 
   '@xtuc/ieee754@1.2.0': {}
 
@@ -9284,6 +9302,8 @@ snapshots:
       picocolors: 1.1.1
       postcss: 8.5.8
       postcss-value-parser: 4.2.0
+
+  axe-core@4.11.1: {}
 
   babel-loader@9.2.1(@babel/core@7.29.0)(webpack@5.105.4):
     dependencies:

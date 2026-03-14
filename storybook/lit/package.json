@@ -11,6 +11,7 @@
     "lit": "^3.2.0"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^10.2.19",
     "@storybook/web-components-vite": "latest",
     "storybook": "latest",
     "vite": "^6.0.0"

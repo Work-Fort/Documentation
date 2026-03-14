@@ -7,6 +7,7 @@ const preview: Preview = {
   parameters: {
     controls: { matchers: { color: /(background|color)$/i, date: /Date$/i } },
     backgrounds: { disable: true },
+    a11y: { test: 'error' },
   },
   decorators: [
     (story) => {
