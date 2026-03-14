@@ -1,0 +1,18 @@
+{
+  "name": "@workfort-docs/storybook-lit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@workfort/ui": "latest",
+    "lit": "^3.2.0"
+  },
+  "devDependencies": {
+    "@storybook/web-components-vite": "latest",
+    "storybook": "latest",
+    "vite": "^6.0.0"
+  }
+}
