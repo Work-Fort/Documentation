@@ -4,8 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'WorkFort Docs',
   tagline: 'Build services on the WorkFort platform',
-  url: 'https://work-fort.github.io',
-  baseUrl: '/Documentation/',
+  url: 'https://docs.workfort.dev',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -34,7 +34,7 @@ const config: Config = {
       title: 'WorkFort',
       items: [
         { type: 'docSidebar', sidebarId: 'docs', position: 'left', label: 'Docs' },
-        { href: 'https://work-fort.github.io/Documentation/design/', label: 'Components', position: 'left' },
+        { href: '/design/', label: 'Components', position: 'left' },
         { href: 'https://github.com/Work-Fort', label: 'GitHub', position: 'right' },
       ],
     },

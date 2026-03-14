@@ -13,9 +13,9 @@ export default function Home(): React.JSX.Element {
           <Link className="button button--primary button--lg" to="/architecture">
             Read the Docs
           </Link>
-          <a className="button button--secondary button--lg" href="https://work-fort.github.io/Documentation/design/">
+          <Link className="button button--secondary button--lg" to="/design/">
             Browse Components
-          </a>
+          </Link>
         </div>
       </main>
     </Layout>
