@@ -9,7 +9,7 @@ const meta: Meta = {
     label: { control: 'text', description: 'Select label text' },
     disabled: { control: 'boolean', description: 'Disabled state' },
   },
-  args: { label: '', disabled: false },
+  args: { label: 'Fruit', disabled: false },
   render: (args) => html`
     <wf-select label=${args.label} ?disabled=${args.disabled}>
       <option value="" selected>Choose an option</option>

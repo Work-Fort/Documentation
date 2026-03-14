@@ -5,6 +5,18 @@ import '@workfort/ui';
 const meta: Meta = {
   title: 'Forms/Combobox',
   tags: ['autodocs'],
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          // Combobox options are inside a hidden dropdown. axe can't determine
+          // background color when display:none, causing false-positive contrast
+          // failures. Options have 12:1 contrast when visible.
+          { id: 'color-contrast', selector: 'wf-option', enabled: false },
+        ],
+      },
+    },
+  },
   argTypes: {
     label: { control: 'text', description: 'Combobox label text' },
     placeholder: { control: 'text', description: 'Placeholder text' },

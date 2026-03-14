@@ -6,7 +6,7 @@ const meta: Meta = {
   title: 'Components/ScrollArea',
   tags: ['autodocs'],
   render: () => html`
-    <wf-scroll-area style="height: 150px; border: 1px solid var(--wf-border);">
+    <wf-scroll-area style="height: 150px; border: 1px solid var(--wf-color-border);">
       <div style="padding: 1rem;">
         ${Array.from({ length: 20 }, (_, i) => html`<p>Scrollable line ${i + 1}</p>`)}
       </div>
