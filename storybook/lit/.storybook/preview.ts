@@ -6,18 +6,15 @@ import type { Preview } from '@storybook/web-components';
 const preview: Preview = {
   parameters: {
     controls: { matchers: { color: /(background|color)$/i, date: /Date$/i } },
-    backgrounds: {
-      default: 'dark',
-      values: [
-        { name: 'dark', value: '#0c0a09' },
-        { name: 'light', value: '#fafaf9' },
-      ],
-    },
+    backgrounds: { disable: true },
   },
   decorators: [
     (story) => {
-      // Ensure wf-* tokens are available
+      // Apply dark theme tokens to the iframe body
       document.documentElement.removeAttribute('data-theme');
+      document.body.style.background = 'var(--wf-color-bg)';
+      document.body.style.color = 'var(--wf-color-text)';
+      document.body.style.padding = '1rem';
       return story();
     },
   ],
