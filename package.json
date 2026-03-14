@@ -1,0 +1,25 @@
+{
+  "name": "workfort-documentation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:dev": "docusaurus start",
+    "docs:build": "docusaurus build",
+    "storybook:lit:dev": "pnpm --filter @workfort-docs/storybook-lit storybook dev -p 6006",
+    "storybook:solid:dev": "pnpm --filter @workfort-docs/storybook-solid storybook dev -p 6007",
+    "storybook:react:dev": "pnpm --filter @workfort-docs/storybook-react storybook dev -p 6008",
+    "build": "pnpm docs:build && pnpm storybook:build",
+    "storybook:build": "pnpm storybook:build:solid && pnpm storybook:build:react && pnpm storybook:build:lit && pnpm storybook:merge",
+    "storybook:build:lit": "pnpm --filter @workfort-docs/storybook-lit storybook build -o ../../build/design",
+    "storybook:build:solid": "pnpm --filter @workfort-docs/storybook-solid storybook build -o ../../build/design/solid",
+    "storybook:build:react": "pnpm --filter @workfort-docs/storybook-react storybook build -o ../../build/design/react",
+    "storybook:merge": "echo 'Storybook outputs merged into build/design/'"
+  },
+  "devDependencies": {
+    "@docusaurus/core": "^3.7.0",
+    "@docusaurus/preset-classic": "^3.7.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}
