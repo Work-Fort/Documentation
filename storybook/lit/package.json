@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^10.2.19",
+    "@storybook/test-runner": "^0.24.2",
     "@storybook/web-components-vite": "latest",
     "storybook": "latest",
     "vite": "^6.0.0"
