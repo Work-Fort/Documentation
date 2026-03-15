@@ -10,7 +10,7 @@ const meta: Meta = {
   },
   args: { variant: 'default' },
   render: (args) => html`
-    <wf-button variant="filled" @wf-click=${async () => {
+    <wf-button @wf-click=${async () => {
       const dialog = document.querySelector<any>('#story-alert-dialog');
       if (!dialog) return;
       const result = await dialog.show({

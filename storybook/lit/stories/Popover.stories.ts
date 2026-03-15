@@ -12,7 +12,7 @@ const meta: Meta = {
   render: (args) => html`
     <div style="padding: 4rem; display: flex; justify-content: center;">
       <wf-popover position=${args.position} aria-label="More information">
-        <wf-button variant="filled">Click me</wf-button>
+        <wf-button>Click me</wf-button>
         <div slot="content" style="padding: 1rem;">
           <p style="margin: 0 0 0.5rem;"><strong>Popover Content</strong></p>
           <p style="margin: 0;">This is rich content inside a popover. Click outside or press Escape to close.</p>

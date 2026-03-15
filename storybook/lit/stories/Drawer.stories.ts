@@ -11,7 +11,7 @@ const meta: Meta = {
   },
   args: { position: 'right', header: 'Drawer Title' },
   render: (args) => html`
-    <wf-button variant="filled" @wf-click=${() => {
+    <wf-button @wf-click=${() => {
       const drawer = document.querySelector<any>('#story-drawer');
       drawer?.show();
     }}>Open Drawer</wf-button>

@@ -13,7 +13,7 @@ const meta: Meta = {
   render: (args) => html`
     <div style="padding: 4rem; display: flex; justify-content: center;">
       <wf-tooltip content=${args.content} position=${args.position}>
-        <wf-button variant="filled">Hover me</wf-button>
+        <wf-button>Hover me</wf-button>
       </wf-tooltip>
     </div>
   `,

@@ -10,7 +10,7 @@ const meta: Meta = {
   },
   args: { header: 'Dialog Title' },
   render: (args) => html`
-    <wf-button variant="filled" @wf-click=${() => {
+    <wf-button @wf-click=${() => {
       const dialog = document.querySelector<any>('#story-dialog');
       dialog?.show();
     }}>Open Dialog</wf-button>
