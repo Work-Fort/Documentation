@@ -1,2 +1,4 @@
 packages:
   - 'storybook/*'
+overrides:
+  '@workfort/ui': link:../scope/lead/web/packages/ui
