@@ -11,7 +11,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
   organizationName: 'Work-Fort',
   projectName: 'Documentation',
-  trailingSlash: false,
+  trailingSlash: undefined,
 
   presets: [
     [
