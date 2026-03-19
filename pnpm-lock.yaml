@@ -4,16 +4,13 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  '@workfort/ui': link:../scope/lead/web/packages/ui
-
 importers:
 
   .:
     dependencies:
       '@workfort/ui':
-        specifier: link:../scope/lead/web/packages/ui
-        version: link:../scope/lead/web/packages/ui
+        specifier: latest
+        version: 0.3.0
     devDependencies:
       '@docusaurus/core':
         specifier: ^3.7.0
@@ -34,8 +31,8 @@ importers:
   storybook/lit:
     dependencies:
       '@workfort/ui':
-        specifier: link:../../../scope/lead/web/packages/ui
-        version: link:../../../scope/lead/web/packages/ui
+        specifier: latest
+        version: 0.3.0
       lit:
         specifier: ^3.2.0
         version: 3.3.2
@@ -59,11 +56,11 @@ importers:
   storybook/react:
     dependencies:
       '@workfort/ui':
-        specifier: link:../../../scope/lead/web/packages/ui
-        version: link:../../../scope/lead/web/packages/ui
+        specifier: latest
+        version: 0.3.0
       '@workfort/ui-react':
         specifier: latest
-        version: 0.0.1(@workfort/ui@scope+lead+web+packages+ui)(react@19.2.4)
+        version: 0.0.1(@workfort/ui@0.3.0)(react@19.2.4)
       react:
         specifier: ^19.0.0
         version: 19.2.4
@@ -84,11 +81,11 @@ importers:
   storybook/solid:
     dependencies:
       '@workfort/ui':
-        specifier: link:../../../scope/lead/web/packages/ui
-        version: link:../../../scope/lead/web/packages/ui
+        specifier: latest
+        version: 0.3.0
       '@workfort/ui-solid':
         specifier: latest
-        version: 0.0.1(@workfort/ui@scope+lead+web+packages+ui)(solid-js@1.9.11)
+        version: 0.0.1(@workfort/ui@0.3.0)(solid-js@1.9.11)
       solid-js:
         specifier: ^1.9.0
         version: 1.9.11
@@ -833,6 +830,9 @@ packages:
 
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+
+  '@bundled-es-modules/message-format@6.2.4':
+    resolution: {integrity: sha512-NBaIEUCzSjLZjrsmSOh8PJLqQjSpXVuekIOuUT8tt4N/FdtAavWsC1YinIqIrbRnkBqV90OxgKzsxhFCzETQBw==}
 
   '@colors/colors@1.5.0':
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
@@ -1927,6 +1927,9 @@ packages:
   '@leichtgewicht/ip-codec@2.0.5':
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==}
 
+  '@lion/ui@0.16.1':
+    resolution: {integrity: sha512-dv9iZNJo7/Yi6EV/Q0ffbrT4yCV6xX2AWlizSvN4gGiUoAS0qC4I7Q6vdpTmeU/Lj/q5dF075oLjX4GuesMj4g==}
+
   '@lit-labs/ssr-dom-shim@1.5.1':
     resolution: {integrity: sha512-Aou5UdlSpr5whQe8AA/bZG0jMj96CoJIWbGfZ91qieWu5AWUMKw8VR/pAkQkJYvBNhmCcWnZlyyk5oze8JIqYA==}
 
@@ -1960,6 +1963,12 @@ packages:
   '@nodelib/fs.walk@1.2.8':
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
+
+  '@open-wc/dedupe-mixin@2.0.1':
+    resolution: {integrity: sha512-+R4VxvceUxHAUJXJQipkkoV9fy10vNo+OnUnGKZnVmcwxMl460KLzytnUM4S35SI073R0yZQp9ra0MbPUwVcEA==}
+
+  '@open-wc/scoped-elements@3.0.6':
+    resolution: {integrity: sha512-w1ayJaUUmBw8tALtqQ6cBueld+op+bufujzbrOdH0uCTXnSQkONYZzOH+9jyQ8auVgKLqcxZ8oU6SzfqQhQkPg==}
 
   '@peculiar/asn1-cms@2.6.1':
     resolution: {integrity: sha512-vdG4fBF6Lkirkcl53q6eOdn3XYKt+kJTG59edgRZORlg/3atWWEReRCx5rYE1ZzTTX6vLK5zDMjHh7vbrcXGtw==}
@@ -2017,6 +2026,9 @@ packages:
 
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
+
+  '@popperjs/core@2.11.8':
+    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
 
   '@rollup/pluginutils@5.3.0':
     resolution: {integrity: sha512-5EdhGZtnu3V88ces7s53hhfK5KSASnJZv8Lulpc04cWO3REESroJXg73DFsOmgbU2BhwV0E20bu2IDZb3VKW4Q==}
@@ -2824,6 +2836,9 @@ packages:
       '@workfort/ui': ^0.0.1
       solid-js: ^1.8.0
 
+  '@workfort/ui@0.3.0':
+    resolution: {integrity: sha512-++rfMypy8u0Iv6ym5V4vuBQ0qQSUYwmtNtPToMO0U+hCdPJx5k/WytLekABvb2fM9MuAP9yfe1wGzA1sEjvXwQ==}
+
   '@xtuc/ieee754@1.2.0':
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
 
@@ -2994,6 +3009,13 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
+
+  autosize@6.0.1:
+    resolution: {integrity: sha512-f86EjiUKE6Xvczc4ioP1JBlWG7FKrE13qe/DxBCpe8GCipCq2nFw73aO8QEBKHfSbYGDN5eB9jXWKen7tspDqQ==}
+
+  awesome-phonenumber@6.12.0:
+    resolution: {integrity: sha512-17Ts/ceWeWXzWZqTIRKA48y3+OyxYsAXYzuxYCn4n0+By+W0dcHk3fHszW6lLxAlCZt3VmVKY6n9AxOCU84qNw==}
+    engines: {node: '>=18'}
 
   axe-core@4.11.1:
     resolution: {integrity: sha512-BASOg+YwO2C+346x3LZOeoovTIoTrRqEsqMa6fmfAV0P+U9mFr9NsyOEpiYvFjbc64NMrSswhV50WdXzdb/Z5A==}
@@ -4425,6 +4447,9 @@ packages:
   hyperdyperid@1.2.0:
     resolution: {integrity: sha512-Y93lCzHYgGWdrJ66yIktxiaGULYc6oGiABxhcO5AufBeOyoIdZF7bIfLaOrbM0iGIOXQQgxxRrFEnb+Y6w1n4A==}
     engines: {node: '>=10.18'}
+
+  ibantools@4.5.1:
+    resolution: {integrity: sha512-DfKQpLlFq9yEUIEnFuCJzss3XavD7iHZTU5PyqXiAJ+rmaMp+NFP3hboumHKuK8nZjuOJg93WemTzcQ5b9jOZA==}
 
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
@@ -6500,6 +6525,9 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
+  singleton-manager@1.8.0:
+    resolution: {integrity: sha512-1M3qImeT5j74a/GtRwM8Q+JOMwhiNRE/uJtIu+U6LBgbRvl9reoeFbQ+ZALR0CwCqg2hhwmLAGZ9KuxefuIWlA==}
+
   sirv@2.0.4:
     resolution: {integrity: sha512-94Bdh3cC2PKrbgSOUqTiGPWVZeSiXfKOVZNJniWoqrWrRkB1CJzBU3NEbiTsPcYy1lDsANA/THzS+9WBiy5nfQ==}
     engines: {node: '>= 10'}
@@ -8207,6 +8235,8 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
+  '@bundled-es-modules/message-format@6.2.4': {}
+
   '@colors/colors@1.5.0':
     optional: true
 
@@ -9844,6 +9874,18 @@ snapshots:
 
   '@leichtgewicht/ip-codec@2.0.5': {}
 
+  '@lion/ui@0.16.1':
+    dependencies:
+      '@bundled-es-modules/message-format': 6.2.4
+      '@open-wc/dedupe-mixin': 2.0.1
+      '@open-wc/scoped-elements': 3.0.6
+      '@popperjs/core': 2.11.8
+      autosize: 6.0.1
+      awesome-phonenumber: 6.12.0
+      ibantools: 4.5.1
+      lit: 3.3.2
+      singleton-manager: 1.8.0
+
   '@lit-labs/ssr-dom-shim@1.5.1': {}
 
   '@lit/reactive-element@2.1.2':
@@ -9906,6 +9948,13 @@ snapshots:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.20.1
+
+  '@open-wc/dedupe-mixin@2.0.1': {}
+
+  '@open-wc/scoped-elements@3.0.6':
+    dependencies:
+      '@open-wc/dedupe-mixin': 2.0.1
+      lit: 3.3.2
 
   '@peculiar/asn1-cms@2.6.1':
     dependencies:
@@ -10015,6 +10064,8 @@ snapshots:
       config-chain: 1.1.13
 
   '@polka/url@1.0.0-next.29': {}
+
+  '@popperjs/core@2.11.8': {}
 
   '@rollup/pluginutils@5.3.0(rollup@4.59.0)':
     dependencies:
@@ -10845,17 +10896,22 @@ snapshots:
 
   '@workfort/auth@0.0.1': {}
 
-  '@workfort/ui-react@0.0.1(@workfort/ui@scope+lead+web+packages+ui)(react@19.2.4)':
+  '@workfort/ui-react@0.0.1(@workfort/ui@0.3.0)(react@19.2.4)':
     dependencies:
       '@workfort/auth': 0.0.1
-      '@workfort/ui': link:../scope/lead/web/packages/ui
+      '@workfort/ui': 0.3.0
       react: 19.2.4
 
-  '@workfort/ui-solid@0.0.1(@workfort/ui@scope+lead+web+packages+ui)(solid-js@1.9.11)':
+  '@workfort/ui-solid@0.0.1(@workfort/ui@0.3.0)(solid-js@1.9.11)':
     dependencies:
       '@workfort/auth': 0.0.1
-      '@workfort/ui': link:../scope/lead/web/packages/ui
+      '@workfort/ui': 0.3.0
       solid-js: 1.9.11
+
+  '@workfort/ui@0.3.0':
+    dependencies:
+      '@lion/ui': 0.16.1
+      lit: 3.3.2
 
   '@xtuc/ieee754@1.2.0': {}
 
@@ -11019,6 +11075,10 @@ snapshots:
       picocolors: 1.1.1
       postcss: 8.5.8
       postcss-value-parser: 4.2.0
+
+  autosize@6.0.1: {}
+
+  awesome-phonenumber@6.12.0: {}
 
   axe-core@4.11.1: {}
 
@@ -12694,6 +12754,8 @@ snapshots:
   human-signals@2.1.0: {}
 
   hyperdyperid@1.2.0: {}
+
+  ibantools@4.5.1: {}
 
   iconv-lite@0.4.24:
     dependencies:
@@ -15400,6 +15462,8 @@ snapshots:
   signal-exit@3.0.7: {}
 
   signal-exit@4.1.0: {}
+
+  singleton-manager@1.8.0: {}
 
   sirv@2.0.4:
     dependencies:
