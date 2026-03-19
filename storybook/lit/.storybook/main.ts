@@ -8,10 +8,12 @@ const config: StorybookConfig = {
     solid: {
       title: 'SolidJS',
       url: './solid/',
+      indexUrl: './solid/index.json',
     },
     react: {
       title: 'React',
       url: './react/',
+      indexUrl: './react/index.json',
     },
   },
   viteFinal: async (config) => {
