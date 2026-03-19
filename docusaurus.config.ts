@@ -34,7 +34,7 @@ const config: Config = {
       title: 'WorkFort',
       items: [
         { type: 'docSidebar', sidebarId: 'docs', position: 'left', label: 'Docs' },
-        { href: '/design/', label: 'Components', position: 'left' },
+        { href: 'https://docs.workfort.dev/design/', label: 'Components', position: 'left' },
         { href: 'https://github.com/Work-Fort', label: 'GitHub', position: 'right' },
       ],
     },
